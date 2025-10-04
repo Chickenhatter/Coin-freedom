@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://cmoe0bo5qxff4"]
+
+[ext_resource type="Texture2D" uid="uid://b3sxkua26ovhs" path="res://download.jpg" id="1_f50pn"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ij6vw"]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+visibility_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, -1)
+shape = SubResource("CapsuleShape2D_ij6vw")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-5, 2)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+physics_interpolation_mode = 1
+light_mask = 4
+z_index = 10
+position = Vector2(1, -2)
+scale = Vector2(0.203125, 0.2734375)
+texture = ExtResource("1_f50pn")
+region_enabled = true
+region_rect = Rect2(37, 23.5, 103, 101)
